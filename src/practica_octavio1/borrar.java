@@ -14,6 +14,7 @@ public class borrar {
         int comida = salida + salida;
         System.out.println(""+comida);
         // que voy hacer
+        // vamos a jugar
         
     }
 }
