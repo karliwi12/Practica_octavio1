@@ -50,8 +50,8 @@ public final class Principal extends javax.swing.JFrame {
 
         jPanel2INTRO.setBackground(new java.awt.Color(255, 255, 255));
 
-        logoINTRO.setForeground(new java.awt.Color(51, 255, 255));
-        logoINTRO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        logoINTRO.setForeground(new java.awt.Color(255, 255, 255));
+        logoINTRO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/practica_octavio1/imagenes/LOGO.png"))); // NOI18N
 
         TExtoBienvenidosINTRO.setBackground(new java.awt.Color(0, 51, 51));
         TExtoBienvenidosINTRO.setFont(new java.awt.Font("Segoe UI Light", 2, 18)); // NOI18N
@@ -59,10 +59,17 @@ public final class Principal extends javax.swing.JFrame {
         TExtoBienvenidosINTRO.setText("BIENVENIDOS");
 
         BotonEntrarINTRO.setBackground(new java.awt.Color(58, 107, 113));
+        BotonEntrarINTRO.setForeground(new java.awt.Color(255, 255, 255));
         BotonEntrarINTRO.setText("ENTRAR");
         BotonEntrarINTRO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BotonEntrarINTRO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonEntrarINTROActionPerformed(evt);
+            }
+        });
 
         botonRegistrarseINTRO.setBackground(new java.awt.Color(14, 33, 40));
+        botonRegistrarseINTRO.setForeground(new java.awt.Color(255, 255, 255));
         botonRegistrarseINTRO.setText("REGISTRARSE");
         botonRegistrarseINTRO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,10 +82,10 @@ public final class Principal extends javax.swing.JFrame {
         jPanel2INTROLayout.setHorizontalGroup(
             jPanel2INTROLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2INTROLayout.createSequentialGroup()
-                .addComponent(logoINTRO, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addComponent(logoINTRO, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(133, 133, 133)
                 .addComponent(TExtoBienvenidosINTRO)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(BotonEntrarINTRO, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonRegistrarseINTRO, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -86,7 +93,6 @@ public final class Principal extends javax.swing.JFrame {
         );
         jPanel2INTROLayout.setVerticalGroup(
             jPanel2INTROLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(logoINTRO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2INTROLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(jPanel2INTROLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,12 +102,15 @@ public final class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel2INTROLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(botonRegistrarseINTRO, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(BotonEntrarINTRO, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2INTROLayout.createSequentialGroup()
+                .addComponent(logoINTRO, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel1INTRO.add(jPanel2INTRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 80));
 
-        EscudoINTRO.setText("jLabel1");
+        EscudoINTRO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/practica_octavio1/imagenes/escudo.png"))); // NOI18N
         EscudoINTRO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1INTRO.add(EscudoINTRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 350, 350));
 
@@ -123,13 +132,18 @@ public final class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonRegistrarseINTROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarseINTROActionPerformed
-    Registro registroframe = new Registro();
-    
-    registroframe.setVisible(true);
-    
-    this.dispose();
-    
+        Registro registroframe = new Registro();
+
+        registroframe.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonRegistrarseINTROActionPerformed
+
+    private void BotonEntrarINTROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEntrarINTROActionPerformed
+        Entrar entrarframe = new Entrar ();
+        
+        entrarframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BotonEntrarINTROActionPerformed
 
     /**
      * @param args the command line arguments

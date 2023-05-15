@@ -11,6 +11,11 @@ public class Practica_Octavio1 {
         Principal p = new Principal();
         p.setVisible(true);
         
+        
+        
+        
+        
+        
     }
     
 }
